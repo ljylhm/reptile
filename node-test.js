@@ -37,6 +37,7 @@ var httpNet = {
                 _data = _data + chunk;
             })
             res.on("end", () => {
+
                 cb(_data);
             })
         })

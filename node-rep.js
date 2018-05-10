@@ -8,7 +8,7 @@ var request = require('request-promise');
 var req = require('sync-request');
 var fs = require('fs');
 
-var url = "   ";
+var url = "https://movie.douban.com/review/best/";
 var com_item_arr = [];
 
 // 爬取主要影评的方法

@@ -1,5 +1,24 @@
 {
+  "name": "reptile",
+  "version": "1.0.0",
+  "description": "reptile",
+  "main": "index.js",
   "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
     "request": "^2.85.0"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ljylhm/reptile.git"
+  },
+  "author": "liang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ljylhm/reptile/issues"
+  },
+  "homepage": "https://github.com/ljylhm/reptile#readme"
 }

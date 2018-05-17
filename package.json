@@ -9,7 +9,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "dev": "node index.js",
+    "dev": "node ./list/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

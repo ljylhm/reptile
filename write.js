@@ -2,7 +2,7 @@ const fs = require("fs");
 const request = require("request");
 
 var httpNet = {
-  http: function(method, url, data, cb, opt) {
+  http: function (method, url, data, cb, opt) {
     var defaultOpt = {
       url: url || "",
       method: method || "get",
@@ -10,13 +10,13 @@ var httpNet = {
       json: true
     };
     var para = Object.assign(defaultOpt, opt);
-    var fn = function(err, data, response) {
+    var fn = function (err, data, response) {
       var isOk = true;
       if (err) {
         isOk = false;
         console.log(`发生了${err.message}`)
       }
-      cb(isOk,response);
+      cb(isOk, response);
     };
 
     if (para.method == "get") para.qs = data;
@@ -24,14 +24,17 @@ var httpNet = {
 
     request(para, fn);
   },
-  httpGet: function(url, data, cb, opt) {
+  httpGet: function (url, data, cb, opt) {
     this.http("get", url, data, cb, opt);
   },
-  httpPost: function(url, data, cb, opt) {
+  httpPost: function (url, data, cb, opt) {
     this.http("post", url, data, cb, opt);
   },
-  saveImg: function(from, to) {
+  saveImg: function (from, to, end) {
     request(from).pipe(fs.createWriteStream(to));
+    request(from).on("end", function () {
+      console.log(end);
+    })
   }
 };
 

@@ -56,7 +56,7 @@
         }
     })
 ```
-<b>动图展示</b>
+<b>动图展示</b></br>
 <img src="./readmeCover/douban-cover.gif" width="400px"></img>
 
 
